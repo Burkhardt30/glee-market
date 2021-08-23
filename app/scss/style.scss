@@ -3,6 +3,8 @@
 @import "fonts";
 @import "global";
 
+// ------------------------------------------------------------------------------------------
+
 .header {
   &__inner {
     display: flex;
@@ -45,7 +47,7 @@
       border-radius: 25px;
       position: relative;
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
@@ -125,12 +127,118 @@
   }
 }
 
+// ==========================================================================================
+// ==========================================================================================
 
+.footer {
+  color: #7b7b7b;
+  font-size: 14px;
+  line-height: 24px;
+  a {
+    display: block;
+    color: #7b7b7b;
+  }
+  &__top {
+    padding: 80px 0 75px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dae4e9;
+  }
+  // &__item {
+  // }
+  &__item--address {
+    max-width: 230px;
+  }
+  &__item--services,
+  &__item--account {
+    max-width: 213px;
+    width: 100%;
+  }
+  &__item--newsletter {
+    max-width: 270px;
+    width: 100%;
+  }
+  &__logo {
+    margin: 0px 0px 22px 0px;
+  }
+  &__item-address,
+  &__item-telephone,
+  &__item-email {
+    margin: 0px 0px 10px 0px;
+  }
+  &__item-email {
+    margin: 0;
+  }
+  &__item-title {
+    @extend %dm-700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #1f2044;
+    text-transform: uppercase;
+    padding: 14px 0px 0px 0px;
+    margin: 0px 0px 24px 0px;
+  }
+  &__list-item + &__list-item {
+    margin: 10px 0px 0px 0px;
+  }
+  &__item-text {
+    margin: 0px 0px 35px 0px;
+  }
+  &__item-form {
+    display: flex;
+  }
+  &__item-input {
+    background-color: #fef7f0;
+    border: none;
+    margin: 0;
+    display: block;
+    padding: 7px 10px 7px 15px;
+    max-width: 170px;
+    &::placeholder {
+      color: #234969;
+      @extend %dm-400;
+    }
+  }
+  &__item-btn {
+    display: block;
+    border: none;
+    background-color: #a3bbc8;
+    color: #fff;
+    margin: 0;
+    padding: 0px;
+    width: 100px;
+    cursor: pointer;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0 38px;
+    @extend %myr-400;
+  }
+  &__nav {
+    display: flex;
+  }
+  &__nav-item {
+    position: relative;
+    margin: 0px 26px 0px 0px;
+    &::after {
+      content: '';
+      width: 1px;
+      height: 15px;
+      background-color: #7b7b7b;
+      position: absolute;
+      top: 50%;
+      right: -14px;
+      transform: translate(-50%, -50%);
+    }
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
 
-
-
-
-
-
+// ------------------------------------------------------------------------------------------
 
 @import "media";
