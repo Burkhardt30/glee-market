@@ -1,6 +1,7 @@
 @import "reset";
 @import "vars";
 @import "fonts";
+@import "libs";
 @import "global";
 
 // ------------------------------------------------------------------------------------------
@@ -123,7 +124,7 @@
       left: 50%;
       transform: translate(-50%, -35%);
     }
-    background-color: #a3bbc8;
+    background-color: $controls;
   }
 }
 
@@ -202,7 +203,7 @@
   &__item-btn {
     display: block;
     border: none;
-    background-color: #a3bbc8;
+    background-color: $controls;
     color: #fff;
     margin: 0;
     padding: 0px;
@@ -238,6 +239,95 @@
     }
   }
 }
+
+// ==========================================================================================
+// ==========================================================================================
+
+.main-slider {
+  &__wrapper {
+    background-color: #fcd7b6;
+    padding: 0 15px;
+  }
+  &__inner {
+    max-width: 1430px;
+    padding: 100px 0 45px;
+    margin: 0 auto;
+  }
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__content {
+    padding: 130px 0px 0px 130px;
+  }
+  &__heading {
+    @extend %rubik-500;
+    max-width: 470px;
+    font-size: 72px;
+    line-height: 70px;
+    color: #243f4d;
+    text-transform: uppercase;
+    margin: 0px 0px 30px 0px;
+  }
+  &__text {
+    @extend %rubik-400;
+    max-width: 370px;
+    color: $basic;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0px 0px 38px 0px;
+  }
+  &__btn {
+    display: block;
+    background: $controls;
+    height: 60px;
+    width: 200px;
+    line-height: 60px;
+    color: #fff;
+    padding: 0px 0px 0px 26px;
+    position: relative;
+    &::after {
+      content: url('../images/icons/right-arrow.svg');
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translatey(-50%);
+    }
+  }
+  .slick-list {
+    padding: 0px 0px 12px 0px;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    li + li {
+      margin: 0px 0px 0px 10px;
+    }
+    li {
+      button {
+        border: 0;
+        @extend %rubik-500;
+        color: #243f4c59;
+        font-size: 10.88px;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff59;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all .3s;
+      }
+    }
+    .slick-active {
+      button {
+        background-color: #ffffff;
+        color: #243f4d;
+      }
+    }
+  }
+}
+
+
 
 // ------------------------------------------------------------------------------------------
 
