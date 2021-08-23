@@ -223,7 +223,7 @@
     position: relative;
     margin: 0px 26px 0px 0px;
     &::after {
-      content: '';
+      content: "";
       width: 1px;
       height: 15px;
       background-color: #7b7b7b;
@@ -270,7 +270,6 @@
     margin: 0px 0px 30px 0px;
   }
   &__text {
-    @extend %rubik-400;
     max-width: 370px;
     color: $basic;
     font-size: 18px;
@@ -287,7 +286,7 @@
     padding: 0px 0px 0px 26px;
     position: relative;
     &::after {
-      content: url('../images/icons/right-arrow.svg');
+      content: url("../images/icons/right-arrow.svg");
       position: absolute;
       top: 50%;
       right: 18px;
@@ -315,7 +314,7 @@
         background-color: #ffffff59;
         border-radius: 50%;
         cursor: pointer;
-        transition: all .3s;
+        transition: all 0.3s;
       }
     }
     .slick-active {
@@ -327,7 +326,57 @@
   }
 }
 
+// ==========================================================================================
+// ==========================================================================================
 
+.features {
+  &__row {
+    background-color: $bg-2;
+    display: flex;
+    justify-content: space-around;
+    padding: 45px 0 60px;
+  }
+  &__item {
+    padding: 0px 0px 0px 90px;
+    max-width: 400px;
+  }
+  &__item--support {
+    position: relative;
+    &::before {
+      content: url(../images/icons/support-icon.svg);
+      position: absolute;
+      top: 15px;
+      left: 0;
+    }
+  }
+  &__item--delivery {
+    position: relative;
+    &::before {
+      content: url(../images/icons/delivery-icon.svg);
+      position: absolute;
+      top: 15px;
+      left: 0;
+    }
+  }
+  &__item--card {
+    position: relative;
+    &::before {
+      content: url(../images/icons/card-icon.svg);
+      position: absolute;
+      top: 15px;
+      left: 0;
+    }
+  }
+  &__title {
+    @extend %dm-700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #414141;
+  }
+  &__text {
+    color: #585858;
+  }
+}
 
 // ------------------------------------------------------------------------------------------
 
